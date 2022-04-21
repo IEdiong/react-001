@@ -4,12 +4,15 @@ import { getGenres } from '../../services/fakeGenreService';
 const Filter = () => {
   const genres = getGenres();
   return (
-    <ul className='list-group'>
+    <div className='list-group'>
       {genres.map((genre) => (
-        <li className='list-group-item'>{genre.name}</li>
+        <button type='button' className='list-group-item list-group-item-action'>
+          {genre.name}
+        </button>
       ))}
-    </ul>
+    </div>
   );
 };
 
 export default Filter;
+// TODO: Make the component to be a list of buttons
